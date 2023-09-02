@@ -4,9 +4,11 @@
 
 <template>
   <div class="flex justify-center items-center min-h-screen">
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div class="flex flex-col">
+      <div class="bg-bright-orange">
+        <img src="./assets/img/">
+      </div>
+    </div>
   </div>
 </template>
 
@@ -15,3 +17,20 @@
   box-sizing: border-box;
 }
 </style>
+
+<script lang="ts">
+export default {
+  data() {
+    return {
+      bodyClass: 'bg-very-light-gray'
+    };
+  },
+  mounted() {
+    document.body.className = this.bodyClass;
+  },
+  beforeDestroy() {
+    // Reset the class when the component is destroyed
+    document.body.className = '';
+  }
+};
+</script>

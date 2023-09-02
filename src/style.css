@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Lexend Deca';
+        src: url('./assets/fonts/LexendDecaRegular.woff') format('woff');
+        font-display: swap;
+        font-style: normal;
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: 'Big Shoulders Display';
+        src: url('./assets/fonts/BigShouldersDisplay-Bold.woff2') format('woff2');
+        font-display: swap;
+        font-style: normal;
+        font-weight: 700;
+    }
+}
